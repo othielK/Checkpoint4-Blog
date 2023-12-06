@@ -1,36 +1,56 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+/* eslint-disable react/button-has-type */
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "../styles/home.css";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent;
+  };
+
+  const getPosts = () => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/posts`)
+      .then((response) => {
+        setPosts(response.data);
+        console.info(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+        // setError(true);
+      });
+  };
+
+  useEffect(() => {
+    getPosts();
+  }, []);
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="home">
+      <div className="posts">
+        {posts.map((post) => (
+          <div className="post" key={post.id}>
+            <div className="postimg">
+              <img
+                src={`${
+                  import.meta.env.VITE_BACKEND_URL
+                }/assets/images/uploads/${post.img}`}
+                alt=""
+              />
+            </div>
+            <div className="content">
+              <Link className="link" to={`/posts/${post.id}`}>
+                <h1>{post.title}</h1>
+              </Link>
+              <p>{getText(post.description)}</p>
+              <button>Read More</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

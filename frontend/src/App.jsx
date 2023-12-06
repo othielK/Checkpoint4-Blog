@@ -1,12 +1,15 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import "./styles/app.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
+    <div>
+      <Navbar />
+      <Content />
+      <Footer />
     </div>
   );
 }

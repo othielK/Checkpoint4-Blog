@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
+
+body {
+  margin: 0;
+  font-family: cursive;
+  /* font-family: "DM Sans", sans-serif; */
+}
+
+body {
+  margin: 0 auto;
+  /* background-color: lightgray; */
+  padding: 2rem 4rem;
+  min-height: 80vh;
+  max-width: 1000px;
+}
+
+section {
+  min-height: 80vh;
+  max-width: 1000px;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 80px;
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.footer > img {
+  height: 120px;
+}
+
+.red-heart {
+  color: red;
+}
+
+/* NAVBAR */
+
+.navbar {
+  /* background-color: lightcyan; */
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logos {
+  max-height: 120px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  color: teal;
+  text-decoration: none;
+
+  &:hover {
+    color: lightseagreen;
+    transform: scale(1.2);
+  }
+}
+
+/* .write {
+  width: 60px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: teal;
+    transform: scale(1.2);
+  }
+} */

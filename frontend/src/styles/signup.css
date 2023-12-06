@@ -1,0 +1,56 @@
+.register_formulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+  border-radius: 16px;
+  padding: 50px;
+  gap: 10px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.register_formulaire {
+  max-width: 70%;
+  /* padding-bottom: 10px; */
+  text-align: center;
+  margin: 150px auto;
+  width: 100%;
+}
+
+.register_formulaire input {
+  width: 150%;
+  padding: 8px 0;
+  margin: 0 auto;
+}
+
+.btn-create {
+  background-color: teal;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  border-radius: 66px;
+  border: none;
+  padding: 8px 0;
+  margin-top: 20px;
+  margin: 0 0 0 40px;
+  color: white;
+}
+
+.btn-deja {
+  color: black;
+  margin: 0 0 0 70px;
+}
+
+@media (max-width: 700px) {
+  .btn-create {
+    margin: 0 0 0 20px;
+  }
+
+  .register_formulaire input {
+    width: 110%;
+    padding: 8px 0;
+    margin: 0 auto;
+  }
+}
