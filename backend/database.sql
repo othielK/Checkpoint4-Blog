@@ -40,3 +40,12 @@ It was managed and created by Facebook and a group of open source developers and
 It is a typescript-based language, managed by Google’s Developer community and was launched in 2016.
 
 It is one of the most important factors that work in favour of Angular that it is built and updated by some of the most credible persons on earth.', 'post.68265d93-14f9-4258-8b6e-93b21217d04a.webp', '2023-12-05 10:45:00','2');
+
+INSERT INTO posts (`title`, `description`, `img`, `date`, `userid`)
+VALUES (
+   'Implementing Skeleton Loading in React',
+   'We cannot simply replace every dynamically loaded element on the page with skeleton loading. In some cases, we cannot predict how the final loaded state of the page is going to look like. For example, if we try and assume a final state of the page ',
+   'post.5b951930-fdb3-4580-900b-64fd17b14cd1.jpg',
+   '2023-12-05 10:45:00',
+   '2'
+);

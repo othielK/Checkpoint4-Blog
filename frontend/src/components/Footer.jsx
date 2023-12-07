@@ -1,18 +1,26 @@
 // /* eslint-disable react/style-prop-object */
 import React from "react";
-import Logo from "../assets/images/Logo6.png";
 import "../styles/app.css";
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import Logo from "../assets/images/Logo8.png";
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer">
         <img src={Logo} alt="" />
-        <span>
-          Made with <span className="red-heart">♥️</span>
-          <br />
-          <b>React,Node,Express,MySQL</b>
-        </span>
+
+        {/* Social Media Section */}
+        <div className="social-media-section">
+          <div className="social-icons">
+            <FaTwitter />
+            <FaLinkedin />
+            <FaGithub />
+            <MdEmail />
+          </div>
+          <b>&copy; 2023 Dev Tech Blog</b>
+        </div>
       </div>
     </footer>
   );

@@ -91,7 +91,7 @@
 
         &:hover {
           border: 1px solid white;
-          background-color: rgb(249, 249, 165);
+          background-color: rgb(236, 233, 233);
           color: black;
         }
       }

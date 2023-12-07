@@ -4,6 +4,7 @@
 body {
   margin: 0;
   font-family: cursive;
+  background-color: rgb(247, 247, 247);
   /* font-family: "DM Sans", sans-serif; */
 }
 
@@ -25,19 +26,23 @@ section {
 .footer {
   margin-top: 80px;
   padding: 10px;
-  background-color: lightgoldenrodyellow;
+  /* background-color: rgb(236, 233, 233); */
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
+
 }
 
-.footer > img {
+.social-icons>svg {
+  margin-right: 10px;
+
+
+  font-size: 16px;
+}
+
+.footer>img {
   height: 120px;
-}
-
-.red-heart {
-  color: red;
 }
 
 /* NAVBAR */
@@ -74,6 +79,13 @@ h6 {
     color: lightseagreen;
     transform: scale(1.2);
   }
+
+
+}
+
+span {
+  color: teal;
+  font-size: 24px;
 }
 
 /* .write {

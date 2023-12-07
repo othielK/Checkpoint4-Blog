@@ -11,9 +11,27 @@ function Provider({ children }) {
     lastname: localStorage.getItem("lastname"),
     email: localStorage.getItem("email"),
   });
-  console.info(infoUser.id);
+
+  const login = (userData) => {
+    setInfoUser(userData);
+    localStorage.setItem("id", userData.id);
+    localStorage.setItem("firstname", userData.firstname);
+    localStorage.setItem("lastname", userData.lastname);
+    localStorage.setItem("email", userData.email);
+  };
+  const logout = () => {
+    // setInfoUser({});
+    setInfoUser({
+      id: null,
+      firstname: null,
+      lastname: null,
+      email: null,
+    });
+    localStorage.clear();
+  };
+
   return (
-    <Context.Provider value={{ infoUser, setInfoUser }}>
+    <Context.Provider value={{ infoUser, login, logout }}>
       {children}
     </Context.Provider>
   );

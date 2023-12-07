@@ -11,20 +11,9 @@ export default function Login() {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
-  // const [input, setInput] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-
-  // const handleChange = (event) => {
-  //   setInput({
-  //     ...input,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-
   const navigateToHomepage = () => {
     navigate("/");
+    window.location.reload();
   };
 
   const handleChangeEmail = (event) => {
@@ -37,7 +26,6 @@ export default function Login() {
 
   const sendCredentials = (event) => {
     event.preventDefault();
-
     axios
       .post(
         `${import.meta.env.VITE_BACKEND_URL}/login`,

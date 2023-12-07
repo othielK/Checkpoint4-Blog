@@ -1,4 +1,4 @@
-.home > .posts {
+.home>.posts {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,16 @@
   }
 }
 
-.posts > .post > .postimg {
+.posts>.post>.postimg {
+  flex: 2;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 6px 9px 9px 4px rgba(95, 94, 94, 0.657);
+
+  position: relative;
+}
+
+/* .posts>.post>.postimg {
   flex: 2;
   max-width: 100%;
   position: relative;
@@ -23,22 +32,25 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(163, 160, 160);
     position: absolute;
     top: 10px;
     left: -10px;
     z-index: -1;
   }
-}
+} */
 
-.posts > .post > .postimg > img {
+.posts>.post>.postimg>img {
   width: 100%;
   height: 100%;
   max-height: 100%;
   /* object-fit: cover; */
 }
 
-.posts > .post > .content {
+
+
+
+.posts>.post>.content {
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -50,11 +62,11 @@ h1 {
   color: teal;
 }
 
-.posts > .post > .content > p {
+.posts>.post>.content>p {
   font-size: 20px;
 }
 
-.posts > .post > .content > button {
+.posts>.post>.content>button {
   width: max-content;
   padding: 10px;
   border: none;
@@ -65,13 +77,13 @@ h1 {
 
   &:hover {
     border: 1px solid white;
-    background-color: lightyellow;
+    background-color: rgb(236, 233, 233);
     color: black;
   }
 }
 
 @media (max-width: 768px) {
-  .home > .posts {
+  .home>.posts {
     gap: 20px;
   }
 
@@ -84,16 +96,16 @@ h1 {
     }
   }
 
-  .posts > .post > .postimg {
+  .posts>.post>.postimg {
     flex: none;
     max-width: 100%;
   }
 
-  .posts > .post > .postimg > img {
+  .posts>.post>.postimg>img {
     max-height: 50%;
   }
 
-  .posts > .post > .content {
+  .posts>.post>.content {
     flex: none;
     max-width: 100%;
   }
